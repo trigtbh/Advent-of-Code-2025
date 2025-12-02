@@ -20,7 +20,7 @@ for l in lines:
     if n == 0: 
         s += 1
 
-print(s)
+print(f"Day 01 Part 1: {s}")
 
 
 # part 2
@@ -47,5 +47,5 @@ for l in lines:
     n %= 100
 
 
-print(s)
+print(f"Day 01 Part 2: {s}")
     
