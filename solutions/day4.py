@@ -43,27 +43,6 @@ print(f"Day {day} Part 1: {s}")
 
 lines = [[c for c in line] for line in contents.split("\n")]
 
-
-
-def adj(y, x):
-    r = 0
-    for p in {
-        (y-1, x-1),
-        (y, x-1),
-        (y+1, x-1),
-        (y-1, x),
-        (y+1, x),
-        (y-1, x+1),
-        (y, x+1),
-        (y+1, x+1)
-    }:
-        if not (0 <= p[0] < len(lines)) or not (0 <= p[1] < len(lines[0])):
-            continue
-        r += (lines[p[0]][p[1]] == "@")
-    return r < 4
-
-s2 = 0
-
 while True:
     r = 0
     points = set()
