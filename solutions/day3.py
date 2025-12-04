@@ -22,7 +22,7 @@ print(f"Day {day} Part 1: {s}")
 
 
 # ---
-# part 1
+# part 2
 
 counted = 12
 
