@@ -10,6 +10,6 @@ print(f"Day {day} Part 1: {None}")
 
 
 # ---
-# part 1
+# part 2
 
 print(f"Day {day} Part 2: {None}")
