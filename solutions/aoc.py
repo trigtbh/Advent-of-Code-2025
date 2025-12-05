@@ -15,3 +15,27 @@ def get_input(year, day):
         with open(os.path.join(basepath, "inputs", f"{day}.txt"), "r") as f:
             contents = f.read().strip()
     return contents
+
+template = """import aoc
+contents = aoc.get_input([year], [day]).strip()
+del aoc
+
+# ---
+"""    
+
+import os
+base = os.path.dirname(os.path.realpath(__file__))
+
+if __name__ == "__main__":
+    os.chdir(base)
+    year = input("Year: ")
+    day = input("Day: ")
+    try:
+        open(f"Day {day} Part 1.py")
+    except:
+        with open(f"Day {day} Part 1.py", "w") as f:
+            f.write(template.replace("[year]", year).replace("[day]", day))
+        with open(f"Day {day} Part 2.py", "w") as f:
+            f.write(template.replace("[year]", year).replace("[day]", day))
+    else:
+        raise FileExistsError("attempting to overwrite existing file with template")
