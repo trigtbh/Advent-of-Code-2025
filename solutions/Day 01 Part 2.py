@@ -2,28 +2,6 @@ import aoc
 contents = aoc.get_input(2025, 1).strip()
 del aoc
 
-# ---
-# part 1
-
-s = 0
-
-n = 50
-lines = contents.split("\n")
-for l in lines:
-    c = l[0]
-    change = int(l[1:])
-    if c == "L":
-        n += change
-    else:
-        n -= change
-    n %= 100
-    if n == 0: 
-        s += 1
-
-print(f"Day 01 Part 1: {s}")
-
-
-# part 2
 s = 0
 
 n = 50
@@ -46,6 +24,4 @@ for l in lines:
                 s += 1
     n %= 100
 
-
-print(f"Day 01 Part 2: {s}")
-    
+print(s)

@@ -1,10 +1,8 @@
 import aoc
-day = 4
-contents = aoc.get_input(2025, day).strip()
+contents = aoc.get_input(2025, 4).strip()
 del aoc
 
 # ---
-# part 1
 
 lines = contents.split("\n")
 
@@ -33,27 +31,4 @@ for y in range(len(lines)):
             s += 1
 
 
-
-
-print(f"Day {day} Part 1: {s}")
-
-
-# ---
-# part 2
-
-lines = [[c for c in line] for line in contents.split("\n")]
-
-while True:
-    r = 0
-    points = set()
-    for y in range(len(lines)):
-        for x in range(len(lines[0])):
-            if lines[y][x] == "@" and adj(y, x):
-                lines[y][x] = "."
-                r += 1
-
-            
-    if r == 0: break
-    s2 += r
-
-print(f"Day {day} Part 2: {s2}")
+print(s)

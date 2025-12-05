@@ -3,25 +3,6 @@ contents = aoc.get_input(2025, 2).strip()
 del aoc
 
 # ---
-# part 1
-
-s = 0
-
-ranges = contents.split(",")
-for r in ranges:
-    lower, upper = map(int, r.split("-"))
-    halfpoint = len(str(upper)) // 2
-    bound = max(int(str(upper)[:halfpoint]), int(str(upper)[halfpoint:]))
-    for i in range(bound+1):
-        test = int(str(i) + str(i))
-        # if lower <= test and test <= upper:
-        if lower <= test <= upper:
-            s += test
-
-
-print(f"Day 2 Part 1: {s}")
-# ---
-# part 2
 
 s = 0
 
@@ -45,5 +26,3 @@ for r in ranges:
             n += 1
             if test > upper: break
 
-
-print(f"Day 2 Part 2: {s}")
