@@ -30,12 +30,16 @@ if __name__ == "__main__":
     os.chdir(base)
     year = input("Year: ")
     day = input("Day: ")
+
+    ds = str(day)
+    if len(ds) == 1: ds = "0" + ds
+
     try:
-        open(f"Day {day} Part 1.py")
+        open(f"Day {ds} Part 1.py")
     except:
-        with open(f"Day {day} Part 1.py", "w") as f:
+        with open(f"Day {ds} Part 1.py", "w") as f:
             f.write(template.replace("[year]", year).replace("[day]", day))
-        with open(f"Day {day} Part 2.py", "w") as f:
+        with open(f"Day {ds} Part 2.py", "w") as f:
             f.write(template.replace("[year]", year).replace("[day]", day))
     else:
         raise FileExistsError("attempting to overwrite existing file with template")
